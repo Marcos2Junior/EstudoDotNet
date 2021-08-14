@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text.RegularExpressions;
 
 namespace ChainOfResponsibility
 {
@@ -12,7 +11,6 @@ namespace ChainOfResponsibility
             Console.WriteLine("XML: " + processaRequisicao.SolicitaConta(new Conta("SAMANTHA CRISTINA", 350.25), new Requisicao(Formato.XML)));
             Console.WriteLine("PORCENTO: " + processaRequisicao.SolicitaConta(new Conta("DANIEL ZEBINI", 1250.75), new Requisicao(Formato.PORCENTO)));
             Console.WriteLine("DESCONHECIDO: " + processaRequisicao.SolicitaConta(new Conta("PAULO CESAR CALEFFI", 100), new Requisicao((Formato)999)));
-
         }
     }
 }

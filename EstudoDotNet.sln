@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChainOfResponsibility", "Ch
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculadorDesconto", "CalculadorDesconto\CalculadorDesconto.csproj", "{7BDFC61E-D259-4ABA-9848-F2388D4BD419}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiltroBancario", "FiltroBancario\FiltroBancario.csproj", "{689DAA40-9157-46ED-A468-170F8671554C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{7BDFC61E-D259-4ABA-9848-F2388D4BD419}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BDFC61E-D259-4ABA-9848-F2388D4BD419}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BDFC61E-D259-4ABA-9848-F2388D4BD419}.Release|Any CPU.Build.0 = Release|Any CPU
+		{689DAA40-9157-46ED-A468-170F8671554C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{689DAA40-9157-46ED-A468-170F8671554C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{689DAA40-9157-46ED-A468-170F8671554C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{689DAA40-9157-46ED-A468-170F8671554C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +36,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{EC9A3B4B-9179-4C1A-937B-2FF7A731FC97} = {E4BA26F8-6EB9-4051-8DEC-224B18E916A9}
 		{7BDFC61E-D259-4ABA-9848-F2388D4BD419} = {E4BA26F8-6EB9-4051-8DEC-224B18E916A9}
+		{689DAA40-9157-46ED-A468-170F8671554C} = {E4BA26F8-6EB9-4051-8DEC-224B18E916A9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3AA08F11-BF93-426D-84D2-B1E09DF74FBC}

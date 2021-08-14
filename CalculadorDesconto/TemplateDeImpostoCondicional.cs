@@ -1,17 +1,27 @@
 ﻿namespace CalculadorDesconto
 {
-    public abstract class TemplateDeImpostoCondicional : IDesconto
+    public abstract class TemplateDeImpostoCondicional : Imposto
     {
-        public double Calcula(Orcamento orcamento)
+        public TemplateDeImpostoCondicional(Imposto outroImposto) : base(outroImposto)
         {
+        }
+        public TemplateDeImpostoCondicional() : base()
+        {
+        }
+
+        public override double Calcula(Orcamento orcamento)
+        {
+            double result;
             if (DeveUsarMaximaTaxacao(orcamento))
             {
-                return MaximaTaxacao(orcamento);
+                result = MaximaTaxacao(orcamento);
             }
             else
             {
-                return MinimaTaxacao(orcamento);
+                result = MinimaTaxacao(orcamento);
             }
+
+            return result + CalculoDoOutroImposto(orcamento);
         }
 
         public abstract bool DeveUsarMaximaTaxacao(Orcamento orcamento);

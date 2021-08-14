@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CalculadorDesconto.Impostos;
+using System;
 
 namespace CalculadorDesconto
 {
@@ -6,8 +7,11 @@ namespace CalculadorDesconto
     {
         static void Main(string[] args)
         {
-            Orcamento orcamento = new Orcamento(250);
-
+            Imposto iss = new ImpostoMuitoAlto(new ICMS());
+            Orcamento orcamento = new Orcamento(100);
+            double valor = iss.Calcula(orcamento);
+            Console.WriteLine(valor);
+            Console.ReadKey();
         }
     }
 }
