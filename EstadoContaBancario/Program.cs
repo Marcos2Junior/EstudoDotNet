@@ -13,6 +13,9 @@ namespace EstadoContaBancario
             Console.WriteLine();
             Console.WriteLine("Use o State para representar os possíveis estados da conta, e a sua transição de estado. Se uma conta passa a " +
                 "ter saldo positivo, fica com status POSITIVO. Caso contrário, possui saldo NEGATIVO.");
+
+
+
         }
     }
 }
