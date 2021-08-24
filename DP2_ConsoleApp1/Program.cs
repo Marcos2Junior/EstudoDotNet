@@ -1,7 +1,9 @@
 ﻿using DP2_ConsoleApp1.cap2;
 using DP2_ConsoleApp1.cap3;
+using DP2_ConsoleApp1.cap4;
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 
 namespace DP2_ConsoleApp1
 {
@@ -9,20 +11,34 @@ namespace DP2_ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Historico historico = new Historico();
-            Contrato c = new Contrato(DateTime.Now, "Marcos", TipoContrato.Novo);
-            historico.Adiciona(c.SalvaEstado());
+            #region Capitulo 4
+            //IExpressao esquerda = new Soma(new Numero(1), new Numero(10));
+            //IExpressao direita = new Subtracao(new Numero(20), new Numero(10));
 
-            c.Avanca();
-            historico.Adiciona(c.SalvaEstado());
+            //IExpressao soma = new Soma(esquerda, direita);
 
-            c.Avanca();
-            historico.Adiciona(c.SalvaEstado());
+            //Console.WriteLine(soma.Avalia());
 
-            Console.WriteLine(historico.Pega(0).Contrato.Tipo);
-            Console.WriteLine(historico.Pega(1).Contrato.Tipo);
-            Console.WriteLine(historico.Pega(2).Contrato.Tipo);
+            Expression soma = Expression.Add(Expression.Constant(10), Expression.Constant(100));
+            //Func<int> funcao = Expression.Lambda<Func<int>>(soma).Compile();
+            //Console.WriteLine(funcao());
+            #endregion
 
+            #region Capitulo 3
+            //Historico historico = new Historico();
+            //Contrato c = new Contrato(DateTime.Now, "Marcos", TipoContrato.Novo);
+            //historico.Adiciona(c.SalvaEstado());
+
+            //c.Avanca();
+            //historico.Adiciona(c.SalvaEstado());
+
+            //c.Avanca();
+            //historico.Adiciona(c.SalvaEstado());
+
+            //Console.WriteLine(historico.Pega(0).Contrato.Tipo);
+            //Console.WriteLine(historico.Pega(1).Contrato.Tipo);
+            //Console.WriteLine(historico.Pega(2).Contrato.Tipo);
+            #endregion
 
             #region Capitulo 2
 
@@ -61,7 +77,7 @@ namespace DP2_ConsoleApp1
             //    Piano piano = new Piano();
             //    piano.Toca(musica);
 
-            #endregion 
+            #endregion
         }
     }
 }
