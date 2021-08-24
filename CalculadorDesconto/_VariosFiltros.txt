@@ -1,0 +1,19 @@
+﻿
+Qual é o padrão para o problema dos Vários Filtros?
+
+Imagine que estamos implementando uma sequência de filtros. Esses filtros precisam eliminar diversas faturas de uma lista, 
+de acordo com algumas regras de negócio: faturas menores que 2000 devem ser eliminadas, faturas maiores do que 8000 devem ser eliminadas, 
+faturas entre 3000 e 4500 que foram emitidas no estado de São Paulo devem ser eliminadas, e assim por diante.
+
+Uma implementação procedural produziria uma sequência de ifs enorme para verificar todas essas condições.
+
+Dentre os padrões de projeto aqui aprendidos, qual se encaixa melhor para esse problema?
+
+--
+
+O Decorator se encaixaria bem nesse problema.
+Poderíamos fazer com que cada filtro seja um "Decorator", e vamos decorando a lista com todos os filtros existentes. 
+Cada filtro teria sua própria classe, simples e fácil de ser compreendida e mantida.
+
+Os outros padrões não fazem sentido para o problema dado. State serve para gerenciar estados de um objeto; 
+builder para criar objetos complexos, e strategy para possibilitar a flexibilização de um algoritmo, trocando partes do mesmo.

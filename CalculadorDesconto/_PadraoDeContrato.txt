@@ -1,0 +1,15 @@
+﻿Qual é o padrão para o problema do Contrato?
+
+Um Contrato pode sofrer tipos de alterações, descontos, ajustes enquanto está EM ANDAMENTO. O mesmo pode acontecer quando ele está FALTANDO ASSINATURA DO CLIENTE. 
+Mas, após ASSINADO, o contrato não pode mais sofrer alterações.
+
+Um código procedural muito provavelmente conteria um conjunto enorme de ifs, um para cada possível estado do Contrato e ação a ser executada, 
+tornando o código desnecessariamente complexo e difícil de ser mantido.
+
+Dentre os padrões de projeto aqui aprendidos, qual se encaixa melhor para esse problema?
+
+--
+
+O State facilitaria o trabalho do desenvolvedor, já que ele possibilitaria que as ações de cada estado fiquem centralizadas em classes específicas, evitando a possível bagunça de um código procedural cheio de ifs.
+
+Além disso, criar novos estados para esse contrato também seria fácil.

@@ -5,9 +5,9 @@
         private string Nome;
         private double Valor;
 
-        public ItemDaNota Constroi()
+        public Item Constroi()
         {
-            return new ItemDaNota(Nome, Valor);
+            return new Item(Nome, Valor);
         }
 
         public ItemDaNotaBuilder Com(string nome)

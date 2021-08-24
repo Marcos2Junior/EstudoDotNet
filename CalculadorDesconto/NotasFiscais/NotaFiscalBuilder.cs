@@ -1,6 +1,6 @@
-﻿using System;
+﻿using CalculadorDesconto.NotasFiscais.AcoesAposGerarNotaFiscal;
+using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace CalculadorDesconto.NotasFiscais
 {
@@ -12,13 +12,25 @@ namespace CalculadorDesconto.NotasFiscais
         private double Impostos;
         private DateTime Data = DateTime.Now;
         private string Observacoes;
-        private IList<ItemDaNota> todosItens = new List<ItemDaNota>();
+        private IList<Item> todosItens = new List<Item>();
+
+        private IList<IAcaoAposGerarNotaFiscal> AcaoAposGerarNotaFiscals = new List<IAcaoAposGerarNotaFiscal>();
+
+        public NotaFiscalBuilder(IList<IAcaoAposGerarNotaFiscal> acaoAposGerarNotaFiscals)
+        {
+            AcaoAposGerarNotaFiscals = acaoAposGerarNotaFiscals;
+        }
 
         public NotaFiscal Constroi()
         {
-            return new NotaFiscal(RazaoSocial, Cnpj, Data, ValorTotal, Impostos, todosItens, Observacoes);
-        }
+            var nf = new NotaFiscal(RazaoSocial, Cnpj, Data, ValorTotal, Impostos, todosItens, Observacoes);
 
+            foreach (var acao in AcaoAposGerarNotaFiscals)
+            {
+                acao.Executa(nf);
+            }
+            return nf;
+        }
 
         public NotaFiscalBuilder ParaEmpresa(string razaoSocial)
         {
@@ -32,7 +44,7 @@ namespace CalculadorDesconto.NotasFiscais
             return this;
         }
 
-        public NotaFiscalBuilder Com(ItemDaNota item)
+        public NotaFiscalBuilder Com(Item item)
         {
             todosItens.Add(item);
             ValorTotal += item.Valor;

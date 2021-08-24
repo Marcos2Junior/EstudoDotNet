@@ -1,0 +1,13 @@
+﻿Qual é o padrão para o problema da Notificação de Sistemas Externos?
+
+Imagina que você precise avisar 3 sistemas externos (auditoria, financeiro, e agências), assim que uma conta bancária receber um depósito.
+
+Em uma implementação procedural, todas essas atividades seriam invocadas logo após a operação de depósito, fazendo com que essa classe perca coesão, 
+e fique complicada de ser entendida e mantida.
+
+Dentre os padrões de projeto aqui aprendidos, qual se encaixa melhor para esse problema?
+
+--
+
+O Observer se encaixaria muito bem. Ele permite que você notifique e execute ações após algum acontecimento no seu sistema. 
+E faz isso de tal forma que o acoplamento entre classes continue baixo, e flexível para adicionar novas ações quando necessário.

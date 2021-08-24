@@ -1,0 +1,18 @@
+﻿Qual é o padrão para o problema dos Algoritmos Similares?
+
+Imagine que temos uma série de algoritmos matemáticos a serem implementados. Todos eles são bem parecidos, possuem a mesma estrutura. 
+As variações são mínimas, por exemplo, um deles deve iterar até o fim da lista, enquanto o outro deve iterar até a metade dela.
+
+Uma implementação procedural possuíria uma alta repetição de código, já que os algoritmos são muito parecidos.
+
+Dentre os padrões de projeto aqui aprendidos, qual se encaixa melhor para esse problema?
+
+
+
+--
+
+O Template Method cairia como uma luva, já que ele possibilita que o desenvolvedor escreva a "estrutura" do algoritmo apenas uma vez, 
+e a reutilize nas implementações específicas de cada um dos algoritmos.
+
+Isso faz com o que o código fique mais simples, possibilita que mudanças na estrutura desses algoritmos sejam facilmente modificadas, 
+e que novos algoritmos sejam criados de forma simples.
