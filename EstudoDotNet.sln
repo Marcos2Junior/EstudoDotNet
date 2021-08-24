@@ -1,17 +1,24 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31205.134
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31612.314
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DesignPatterns", "DesignPatterns", "{E4BA26F8-6EB9-4051-8DEC-224B18E916A9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChainOfResponsibility", "ChainOfResponsibility\ChainOfResponsibility.csproj", "{EC9A3B4B-9179-4C1A-937B-2FF7A731FC97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculadorDesconto", "CalculadorDesconto\CalculadorDesconto.csproj", "{7BDFC61E-D259-4ABA-9848-F2388D4BD419}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculadorDesconto", "CalculadorDesconto\CalculadorDesconto.csproj", "{7BDFC61E-D259-4ABA-9848-F2388D4BD419}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiltroBancario", "FiltroBancario\FiltroBancario.csproj", "{689DAA40-9157-46ED-A468-170F8671554C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FiltroBancario", "FiltroBancario\FiltroBancario.csproj", "{689DAA40-9157-46ED-A468-170F8671554C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstadoContaBancario", "EstadoContaBancario\EstadoContaBancario.csproj", "{60CCD581-62FD-4DDF-9FE2-E8A4233998B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EstadoContaBancario", "EstadoContaBancario\EstadoContaBancario.csproj", "{60CCD581-62FD-4DDF-9FE2-E8A4233998B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DesignPatterns2", "DesignPatterns2", "{79EF35D2-0A37-44C5-B07C-7F0A47486441}"
+	ProjectSection(SolutionItems) = preProject
+		_Notas.txt = _Notas.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DP2_ConsoleApp1", "DP2_ConsoleApp1\DP2_ConsoleApp1.csproj", "{EA904900-4A5F-45D3-A957-FFC5AC9E3197}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +42,10 @@ Global
 		{60CCD581-62FD-4DDF-9FE2-E8A4233998B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60CCD581-62FD-4DDF-9FE2-E8A4233998B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60CCD581-62FD-4DDF-9FE2-E8A4233998B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA904900-4A5F-45D3-A957-FFC5AC9E3197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA904900-4A5F-45D3-A957-FFC5AC9E3197}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA904900-4A5F-45D3-A957-FFC5AC9E3197}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA904900-4A5F-45D3-A957-FFC5AC9E3197}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +55,7 @@ Global
 		{7BDFC61E-D259-4ABA-9848-F2388D4BD419} = {E4BA26F8-6EB9-4051-8DEC-224B18E916A9}
 		{689DAA40-9157-46ED-A468-170F8671554C} = {E4BA26F8-6EB9-4051-8DEC-224B18E916A9}
 		{60CCD581-62FD-4DDF-9FE2-E8A4233998B0} = {E4BA26F8-6EB9-4051-8DEC-224B18E916A9}
+		{EA904900-4A5F-45D3-A957-FFC5AC9E3197} = {79EF35D2-0A37-44C5-B07C-7F0A47486441}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3AA08F11-BF93-426D-84D2-B1E09DF74FBC}

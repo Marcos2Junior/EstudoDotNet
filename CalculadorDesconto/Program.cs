@@ -26,7 +26,6 @@ namespace CalculadorDesconto
                            .Com(new ItemDaNotaBuilder().Com("item 3").Com(300.0).Constroi())
                            .ComObservacoes("entregar nf pessoalmente");
 
-
             NotaFiscal nf = builder.Constroi();
         }
     }
