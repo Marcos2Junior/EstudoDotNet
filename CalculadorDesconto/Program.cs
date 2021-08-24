@@ -1,4 +1,5 @@
 ﻿using CalculadorDesconto.Impostos;
+using CalculadorDesconto.NotasFiscais;
 using System;
 
 namespace CalculadorDesconto
@@ -7,17 +8,16 @@ namespace CalculadorDesconto
     {
         static void Main(string[] args)
         {
-            Orcamento reforma = new Orcamento(500.0);
-
-            reforma.AplicaDescontoExtra();
-            Console.WriteLine(reforma.Valor); // imprime 475,00 pois descontou 5%
-            reforma.Aprova(); // aprova nota!
-
-            reforma.AplicaDescontoExtra();
-            Console.WriteLine(reforma.Valor); // imprime 465,50 pois descontou 2%
-
-            reforma.Finaliza();
-            Console.ReadKey();
+            NotaFiscal nf = new NotaFiscalBuilder()
+                           .ParaEmpresa("Caelum")
+                           .ComCnpj("123.456.789/0001-10")
+                           .Com(new ItemDaNotaBuilder().Com("item 1").Com(100.0).Constroi())
+                           .Com(new ItemDaNotaBuilder().Com("item 2").Com(200.0).Constroi())
+                           .Com(new ItemDaNotaBuilder().Com("item 3").Com(300.0).Constroi())
+                           .ComObservacoes("entregar nf pessoalmente")
+                           .NaDataAtual()
+                           .Constroi();
         }
     }
+
 }
