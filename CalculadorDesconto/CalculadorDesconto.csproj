@@ -5,12 +5,4 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="__BeneficiosDesignPatterns.txt" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="__BeneficiosDesignPatterns.txt" />
-  </ItemGroup>
-
 </Project>
