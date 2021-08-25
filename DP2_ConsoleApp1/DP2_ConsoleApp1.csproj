@@ -3,6 +3,12 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyVersion>2021.8.25.0209</AssemblyVersion>
+    <FileVersion>2021.8.25.0209</FileVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="cap4\Divisao.cs~RF32f62d4.TMP" />
+  </ItemGroup>
 
 </Project>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DP2_ConsoleApp1.cap5;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,17 +7,23 @@ namespace DP2_ConsoleApp1.cap4
 {
     public class Divisao : IExpressao
     {
-        private IExpressao _direita;
-        private IExpressao _esquerda;
+        public IExpressao Esquerda { get; private set; }
+        public IExpressao Direita { get; private set; }
 
         public Divisao(IExpressao esquerda, IExpressao direita)
         {
-            _direita = direita;
-            _esquerda = esquerda;
+            Direita = direita;
+            Esquerda = esquerda;
         }
+
+        public void Aceita(IVisitor visitor)
+        {
+            visitor.ImprimeDivisao(this);
+        }
+
         public int Avalia()
         {
-            return _esquerda.Avalia() / _direita.Avalia();
+            return Esquerda.Avalia() / Direita.Avalia();
         }
     }
 }

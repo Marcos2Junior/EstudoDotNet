@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DP2_ConsoleApp1.cap5;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,15 +7,20 @@ namespace DP2_ConsoleApp1.cap4
 {
     public class Numero : IExpressao
     {
-        private int _numero;
+        public int Valor { get; private set; }
         public Numero(int numero)
         {
-            _numero = numero;
+            Valor = numero;
         }
 
         public int Avalia()
         {
-            return _numero;
+            return Valor;
+        }
+
+        public void Aceita(IVisitor visitor)
+        {
+            visitor.ImprimeNumero(this);
         }
     }
 }

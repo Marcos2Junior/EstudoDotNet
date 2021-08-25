@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DP2_ConsoleApp1.cap5;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,17 +7,22 @@ namespace DP2_ConsoleApp1.cap4
 {
     public class Soma : IExpressao
     {
-        private IExpressao _esquerda;
-        private IExpressao _direita;
+        public IExpressao Esquerda { get; private set; }
+        public IExpressao Direita { get; private set; }
         public Soma(IExpressao esquerda, IExpressao direita)
         {
-            _esquerda = esquerda;
-            _direita = direita;
+            Esquerda = esquerda;
+            Direita = direita;
         }
 
         public int Avalia()
         {
-            return _esquerda.Avalia() + _direita.Avalia();
+            return Esquerda.Avalia() + Direita.Avalia();
+        }
+
+        public void Aceita(IVisitor visitor)
+        {
+            visitor.ImprimeSoma(this);
         }
     }
 }
