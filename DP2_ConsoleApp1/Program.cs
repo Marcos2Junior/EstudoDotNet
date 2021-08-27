@@ -2,6 +2,7 @@
 using DP2_ConsoleApp1.cap3;
 using DP2_ConsoleApp1.cap4;
 using DP2_ConsoleApp1.cap5;
+using DP2_ConsoleApp1.cap6;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
@@ -12,16 +13,24 @@ namespace DP2_ConsoleApp1
     {
         static void Main(string[] args)
         {
+            #region Capitulo 6
+
+            IEnviador enviador = new MensagemPorEmail();
+            IMensagem mensagem = new MensagemAdministrativa("Marcos");
+            mensagem.Enviador = enviador;
+            mensagem.Envia();
+            #endregion
+
             #region Capitulo 4
-            IExpressao esquerda = new Soma(new Numero(1), new Numero(10));
-            IExpressao direita = new Subtracao(new Numero(20), new Numero(10));
+            //IExpressao esquerda = new Soma(new Numero(1), new Numero(10));
+            //IExpressao direita = new Subtracao(new Numero(20), new Numero(10));
 
-            IExpressao soma = new Soma(esquerda, direita);
+            //IExpressao soma = new Soma(esquerda, direita);
 
-            Console.WriteLine(soma.Avalia());
+            //Console.WriteLine(soma.Avalia());
 
-            ImpressoraVisitor impressora = new ImpressoraVisitor();
-            soma.Aceita(impressora);
+            //ImpressoraVisitor impressora = new ImpressoraVisitor();
+            //soma.Aceita(impressora);
 
             //Expression soma = Expression.Add(Expression.Constant(10), Expression.Constant(100));
             //Func<int> funcao = Expression.Lambda<Func<int>>(soma).Compile();
