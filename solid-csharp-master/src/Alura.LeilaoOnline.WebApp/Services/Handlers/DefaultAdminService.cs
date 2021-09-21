@@ -9,65 +9,67 @@ namespace Alura.LeilaoOnline.WebApp.Services.Handlers
 {
     public class DefaultAdminService : IAdminService
     {
-        readonly ILeilaoDao _dao;
+        readonly ILeilaoDao _daoLeilao;
+        readonly ICategoriaDao _daoCategoria;
 
-        public DefaultAdminService(ILeilaoDao dao)
+        public DefaultAdminService(ILeilaoDao dao, ICategoriaDao categoriaDao)
         {
-            _dao = dao;
+            _daoLeilao = dao;
+            _daoCategoria = categoriaDao;
         }
 
         public IEnumerable<Categoria> ConsultaCategorias()
         {
-            return _dao.BuscarTodasCategorias();
+            return _daoCategoria.BuscaTodos();
         }
 
         public IEnumerable<Leilao> ConsultaLeiloes()
         {
-            return _dao.BuscarTodosLeiloes();
+            return _daoLeilao.BuscaTodos();
         }
 
         public Leilao ConsultaLeilaoPorId(int id)
         {
-            return _dao.BuscarLeilaoPorId(id);
+            return _daoLeilao.BuscarPorID(id);
         }
 
         public void CadastraLeilao(Leilao leilao)
         {
-            _dao.Incluir(leilao);
+            _daoLeilao.Incluir(leilao);
         }
 
         public void ModificaLeilao(Leilao leilao)
         {
-            _dao.Alterar(leilao);
+            _daoLeilao.Alterar(leilao);
         }
 
         public void RemoveLeilao(Leilao leilao)
         {
             if (leilao != null && leilao.Situacao != SituacaoLeilao.Pregao)
             {
-                _dao.Excluir(leilao);
+                _daoLeilao.Excluir(leilao);
             }
         }
 
         public void FinalizaPregaoDoLeilaoComId(int id)
         {
-            var leilao = _dao.BuscarLeilaoPorId(id);
+            var leilao = _daoLeilao.BuscarPorID(id);
             if (leilao != null && leilao.Situacao == SituacaoLeilao.Pregao)
             {
                 leilao.Situacao = SituacaoLeilao.Finalizado;
                 leilao.Termino = DateTime.Now;
-                _dao.Alterar(leilao);
+                _daoLeilao.Alterar(leilao);
             }
         }
 
         public void IniciaPregaoDoLeilaoComId(int id)
         {
-            var leilao = _dao.BuscarLeilaoPorId(id);
+            var leilao = _daoLeilao.BuscarPorID(id);
             if (leilao != null && leilao.Situacao == SituacaoLeilao.Rascunho)
             {
                 leilao.Situacao = SituacaoLeilao.Pregao;
                 leilao.Inicio = DateTime.Now;
-                _dao.Alterar(leilao);
+                _daoLeilao.Alterar(leilao);
             }
         }
     }
