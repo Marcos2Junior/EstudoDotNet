@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DP2_ConsoleApp1.Cap9
 {
-    enum Tipo
+    public enum Tipo
     {
         Boleto
     }
