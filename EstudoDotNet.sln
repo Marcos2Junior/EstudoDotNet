@@ -23,6 +23,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SOLID", "SOLID", "{1BDDF023-FD16-49D2-8762-9B090F47EF8D}"
 	ProjectSection(SolutionItems) = preProject
 		_1_ResponsabilidadeUnica.txt = _1_ResponsabilidadeUnica.txt
+		_2_InversaoDeDependencia.txt = _2_InversaoDeDependencia.txt
 		__objetivo.txt = __objetivo.txt
 	EndProjectSection
 EndProject

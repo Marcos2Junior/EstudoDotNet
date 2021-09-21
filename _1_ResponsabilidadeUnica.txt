@@ -1,7 +1,16 @@
 => Por que evitar código duplicado?
 
+Código repetido é uma forma específica de conhecimento repetido(DRY)
+Repetição de código é ruim porque impact nos custos de manutenção e aumenta sua dívida técnica
+Repetição de código pode indicar que métodos e classes possuem muitas responsabilidades
 
 => O que devo fazer quando encontro código repetido em meu projeto?
+
+
 => Qual a diferença entre responsabilidade de método e responsabilidade de classes?
+
+A responsabilidade de um método é executar uma unica função.
+A responsabilidade de uma classe é responder a mudanças originadas por uma unica pessoa, função ou área de negócio (agende de mudança)
+
 => Qual o propósito do padrão DAO?
 => Qual o princípio S.O.L.I.D. relacionado à coesão?
