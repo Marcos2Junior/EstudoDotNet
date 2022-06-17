@@ -1,0 +1,23 @@
+Os principios SOLID representam cinco principios de boas praticas de programação orientada a objetos 
+que ajudam a escrever codigos mais robustos, com baixo acoplamento, faceis de estender, testar, 
+reutilizar e de manter.
+
+- a palavra solid é um acronimo, criado por Michael Feathers
+- esses principios foram identificados por Robert Cecil Martin (Uncle Bob)
+
+Acronimo : S.O.L.I.D
+
+SRP - Single Responsibility Principle
+Principio da responsabilidade unica - uma classe deve ter um, e somente um, motivo para mudar.
+
+OCP - Open/Closed Principle
+Principio de aberto/fechado - voce deve ser capaz de estender um comportamento de uma classe sem a necessidade de modifica-lo
+
+LSP - Liskov Substituition Principle
+Principio da substituicao de Liskov - As classes derivadas devem ser substituiveis por suas classes bases.
+
+ISP - Interface Segregation Principle
+Principio da segregaçao de interfaces - muitas interfaces especificas sao melhores do que uma interface unica geral
+
+DIP - Dependency Inversion Principle
+Principio da inversao de dependencia - Dependa de abstracoes e nao de implementacoes
