@@ -21,3 +21,4 @@ Principio da segregaçao de interfaces - muitas interfaces especificas sao melhor
 
 DIP - Dependency Inversion Principle
 Principio da inversao de dependencia - Dependa de abstracoes e nao de implementacoes
+

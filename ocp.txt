@@ -1,0 +1,11 @@
+Metodos de extensao
+Metodos estaticos aplicados a um tipo que permitem adicionar uma nova funcionalidade a um tipo de dados existente sem ter que criar um novo tipo derivado
+
+principios open/closed
+voce deve ser capaz de estender um comportamento de uma classe sem a necessidade de altera-lo
+
+implementar o principio ocp
+criar novas classes derivadas que devem ser herdadas pela classe base original
+
+como podemos usar os metodos de extensao para incluir novas funcionalidades sem alterar o codigo da classe
+podemos usar os metodos de extensao para implementar o principio ocp
