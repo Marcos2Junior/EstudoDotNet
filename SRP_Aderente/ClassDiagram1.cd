@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SRP_Aderente.RegistraLog">
+    <Position X="1.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>RegistraLog.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SRP_Aderente.EnviarEmail">
+    <Position X="4" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAEAAAAAAAgAAAAAAAEBAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EnviarEmail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRP_Aderente.Pedido">
+    <Position X="5.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAEEAAAAAAAAAAAABAAAAAQEAAAAAA=</HashCode>
+      <FileName>Pedido.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="SRP_Aderente.ILogger" Collapsed="true">
+    <Position X="1.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>ILogger.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

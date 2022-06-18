@@ -11,14 +11,29 @@ namespace SRP_Aderente
         public long Quantidade { get; set; }
         public DateTime Data { get; set; }
 
+        private ILogger infoLogger;
+        private EnviarEmail enviarEmail;
+
+        public Pedido()
+        {
+            infoLogger = new RegistraLog();
+            enviarEmail = new EnviarEmail();
+        }
         public void IncluirPedido()
         {
             try
             {
-                // Codigo para incluir o pedido
+                infoLogger.Info("Incluindo um pedido");
+
+                enviarEmail.EmailFrom = "emailfrom@xyz.com";
+                enviarEmail.EmailTo = "emailto@xyz.com";
+                enviarEmail.EmailSubject = "SRP";
+                enviarEmail.EmailBody = "um";
+                enviarEmail.Enviar();
             }
             catch (Exception ex)
             {
+                infoLogger.Info("Erro ao enviar email :" + ex.Message);
             }
         }
 
@@ -26,10 +41,11 @@ namespace SRP_Aderente
         {
             try
             {
-                //codigo para deletar o pedido gerado
+                infoLogger.Info("pedido deletado em " + DateTime.Now);
             }
             catch (Exception ex)
             {
+                infoLogger.Info("Erro ao deletar o pedido" + ex.Message);
             }
         }
     }
